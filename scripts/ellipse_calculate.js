@@ -1,17 +1,17 @@
 backgroundColorChange();
 backgroundColorBack();
 function calculateEllipseArea() {
-    const a = calculate('ellipse-p');
-    const b = calculate('ellipse-b');
+    const a = calculateEllipse('ellipse-a');
+    const b = calculateEllipse('ellipse-b');
     const area = 0.5 * a * b;
-    setArea('ellipse-area',area);
+    setEllipseArea('ellipse-area',area);
 }
 
-function calculate(value) {
+function calculateEllipse(value) {
     return parseFloat(document.getElementById(value).value);
 }
 
-function setArea(elementId, area){
+function setEllipseArea(elementId, area){
     document.getElementById('res-ellipse').style.display='inline';
     document.getElementById(elementId).innerText=area;
 }
@@ -19,7 +19,6 @@ function setArea(elementId, area){
 function backgroundColorChange() {
     document.getElementById('ellipse-contianer').addEventListener('mouseover', function () {
         document.getElementById('ellipse-contianer').classList.add('bg-fuchsia-300');
-        // document.getElementById('ellipse-contianer').style.backgroundColor = 'gray';
     })
 }
 function backgroundColorBack() {

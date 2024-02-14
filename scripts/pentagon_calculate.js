@@ -1,17 +1,17 @@
 backgroundColorChange();
 backgroundColorBack();
 function calculatePentagonArea() {
-    const d1 = calculate('pentagon-p');
-    const d2 = calculate('pentagon-b');
+    const p = calculate('pentagon-p');
+    const b = calculate('pentagon-b');
     const area = 0.5 * p * b;
-    setArea('pentagon-area',area);
+    setPentagonArea('pentagon-area',area);
 }
 
 function calculate(value) {
     return parseFloat(document.getElementById(value).value);
 }
 
-function setArea(elementId, area){
+function setPentagonArea(elementId, area){
     document.getElementById('res-pentagon').style.display='inline';
     document.getElementById(elementId).innerText=area;
 }
